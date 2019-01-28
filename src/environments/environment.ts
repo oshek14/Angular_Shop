@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase:{
-    apiKey: "AIzaSyC8EwmkhUsznfzS29_AM-PRX0ykypSyzpI",
-    authDomain: "oshop-6fe46.firebaseapp.com",
-    databaseURL: "https://oshop-6fe46.firebaseio.com",
-    projectId: "oshop-6fe46",
-    storageBucket: "oshop-6fe46.appspot.com",
-    messagingSenderId: "260388916378"
+    apiKey: "AIzaSyA8AuUdPhaNPkrNI_-ItKD36GN4SWw86fc",
+    authDomain: "fir-crud-5a45c.firebaseapp.com",
+    databaseURL: "https://fir-crud-5a45c.firebaseio.com",
+    projectId: "fir-crud-5a45c",
+    storageBucket: "fir-crud-5a45c.appspot.com",
+    messagingSenderId: "628648965905"
   }
 };
 
