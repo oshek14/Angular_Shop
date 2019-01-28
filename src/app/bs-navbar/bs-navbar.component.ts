@@ -1,5 +1,6 @@
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
+import { resolve } from 'q';
 
 @Component({
   selector: 'bs-navbar',
@@ -10,7 +11,7 @@ export class BsNavbarComponent{
 
   
   constructor(public auth: AuthService) { 
-  
+   
   }
 
   logout(){
