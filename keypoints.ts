@@ -22,9 +22,7 @@ import { map } from 'rxjs/internal/operators/map';
 // }
 
 
-// Point 2) using observables
 
-//Observable vs Promise - https://medium.com/@mpodlasin/promises-vs-observables-4c123c51fe13
 const observable:Observable<number> = new Observable((observer) => {
     observer.next(5);
     observer.next(7);
@@ -41,5 +39,6 @@ observable.pipe(map( val => {
     console.log("Subscribe Function");
     console.log(data);
 }) 
+
 
 
