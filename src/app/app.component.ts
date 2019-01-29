@@ -22,5 +22,6 @@ export class AppComponent {
       localStorage.removeItem("returnUrl");
       route.navigateByUrl(returnUrl);
     });
+    
   }
 }
