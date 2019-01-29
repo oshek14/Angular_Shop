@@ -14,7 +14,7 @@
           <div class="form-group">
             <label for="price">Price</label>
             <div class="input-group">
-              <span class="input-group-addon">$</span>
+              <span class="input-group-addon os-app-input-addon">$</span>
               <input #price ="ngModel" [(ngModel)]="product.price" name="price"  id="price" type="number" class="form-control" required [min]="0">
             </div>
             <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
@@ -52,16 +52,7 @@
   </div>
 
   <div class="col-md-6">
-    <div class="card" style="width: 20rem;">
-      <img class="card-img-top" [src]="product.imageUrl" *ngIf="product.imageUrl">
-      <div class="card-body">
-        <h4 class="card-title">{{ product.title }}</h4>
-        <p class="card-text"> {{ product.price | currency:'USD':true}}</p>
-      </div>
-    
-    
-    
-    </div>
+    <product-card [product]="product" [show-actions]="false"></product-card>
   </div>
 
 </div>
