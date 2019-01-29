@@ -10,7 +10,7 @@ import { resolve } from 'q';
 export class BsNavbarComponent{
 
   
-  constructor(public auth: AuthService) { 
+  constructor(private auth: AuthService) { 
    
   }
 
