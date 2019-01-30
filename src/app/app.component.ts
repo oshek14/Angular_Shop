@@ -2,6 +2,8 @@ import { AuthService } from './auth.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from './user.service';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -12,7 +14,7 @@ import { UserService } from './user.service';
 export class AppComponent {
   title = 'oshop';
 
-  constructor(private userService : UserService, private auth: AuthService, route: Router){
+  constructor(private http:HttpClient, private userService : UserService, private auth: AuthService, route: Router){
     auth.user$.subscribe(user=>{
       if(!user) return;
       userService.save(user);

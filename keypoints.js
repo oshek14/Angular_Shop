@@ -18,20 +18,24 @@ var map_1 = require("rxjs/internal/operators/map");
 // class Point2{
 //     constructor(private x?:number){}
 // }
-// Point 2) using observables
-var observable = new Observable_1.Observable(function (observer) {
+/* Point 2) Observable */
+var numberObservable = new Observable_1.Observable(function (observer) {
     observer.next(5);
     observer.next(7);
     setTimeout(function () {
         observer.next(10);
     }, 3000);
 });
-setTimeout(function () {
-    observable.pipe(map_1.map(function (val) {
-        console.log("Map Function");
-        return val * 2;
-    })).subscribe(function (data) {
-        console.log("Subscribe Function");
-        console.log(data);
-    });
-}, 5000);
+numberObservable.pipe(map_1.map(function (val) {
+    console.log("Map Function");
+    return val * 2;
+})).subscribe(function (data) {
+    console.log("Subscribe Function");
+    console.log(data);
+});
+// Point 3) Any vs Object https://stackoverflow.com/questions/18961203/any-vs-object
+var a;
+a.title = 5;
+console.log(a);
+console.log(a.title);
+// Point 4)

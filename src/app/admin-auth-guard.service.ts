@@ -1,9 +1,8 @@
 import { Observable } from 'rxjs/internal/Observable';
-import { UserService } from './user.service';
 import { AuthService } from './auth.service';
 import { CanActivate } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/internal/operators/map';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({

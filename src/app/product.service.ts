@@ -17,14 +17,14 @@ export class ProductService {
     this.db.list('/products').push(product);
   }
 
-  getAll() : Observable<any>{
-    return this.db.list('/products').snapshotChanges().pipe(map(changes=>{
+  getAll(){
+    return this.db.list<Product>('/products').snapshotChanges().pipe(map(changes=>{
       return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
     }))
   }
 
   getProductById(productId){
-    return this.db.object("/products/"+productId).valueChanges().pipe(take(1)); //take automatically unsubscribes
+    return this.db.object<Product>("/products/"+productId).valueChanges().pipe(take(1)); //take automatically unsubscribes
   }
 
   update(productId, product){

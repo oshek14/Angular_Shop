@@ -1,5 +1,8 @@
 import { Observable } from "rxjs/internal/Observable";
 import { map } from 'rxjs/internal/operators/map';
+import { Product } from 'src/app/models/product';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Injectable } from '@angular/core';
 
 // Point 1
 
@@ -22,8 +25,8 @@ import { map } from 'rxjs/internal/operators/map';
 // }
 
 
-
-const observable:Observable<number> = new Observable((observer) => {
+/* Point 2) Observable */
+const numberObservable:Observable<number> = new Observable((observer) => {
     observer.next(5);
     observer.next(7);
     setTimeout(() => {
@@ -32,13 +35,19 @@ const observable:Observable<number> = new Observable((observer) => {
 });
 
 
-observable.pipe(map( val => {
+numberObservable.pipe(map( val => {
     console.log("Map Function");
     return val*2;
 })).subscribe(data=>{
     console.log("Subscribe Function");
     console.log(data);
-}) 
+})
 
+
+
+// Point 3) Any vs Object https://stackoverflow.com/questions/18961203/any-vs-object
+
+
+// Point 4)
 
 
