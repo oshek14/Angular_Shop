@@ -4,13 +4,9 @@ import { Product } from 'src/app/models/product';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Injectable } from '@angular/core';
 
-// Point 1
 
-/* Both are the same. second one (less syntax).
-    it creates private variable and when passing argument,
-    it automatically assigns to that field.
-
-    x? - means it's optional.
+/* Both are the same. second one (less syntax).it creates private variable and when passing argument,
+    it automatically assigns to that field. x? - means it's optional.
 */
 
 // class Point1{
@@ -47,7 +43,13 @@ numberObservable.pipe(map( val => {
 
 // Point 3) Any vs Object https://stackoverflow.com/questions/18961203/any-vs-object
 
+// var objectEx1 : Object;
+// var objectEx2 : {};
+// var anyEx : any;
+// var numEx : number;
+// var stringEx : string;
 
-// Point 4)
+// objectEx1 = numEx;
+// numEx = objectEx1;
 
 

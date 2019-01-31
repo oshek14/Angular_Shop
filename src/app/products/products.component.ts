@@ -22,6 +22,7 @@ export class ProductsComponent implements OnInit, OnDestroy{
     
     // we could have used switchmap instead of nested subscribe.
     productService.getAll().subscribe(products => {
+     
       this.filteredProducts = this.products = products;
       
       route.queryParamMap.subscribe(params =>{

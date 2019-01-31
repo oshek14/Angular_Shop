@@ -23,7 +23,7 @@ export class ProductService {
     }))
   }
 
-  getProductById(productId){
+  getProductById(productId): Observable<Product>{
     return this.db.object<Product>("/products/"+productId).valueChanges().pipe(take(1)); //take automatically unsubscribes
   }
 
