@@ -15,4 +15,6 @@ export class LoginComponent{
   login(){
     this.auth.login();
   }
+
+  
 }

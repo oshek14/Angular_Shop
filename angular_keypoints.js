@@ -22,3 +22,6 @@ we can get this input's value by the name "title".
 {title:"text", price:"20"}.
 
 `
+
+//3) reactivity a) https://netbasal.com/a-comprehensive-guide-to-angular-onpush-change-detection-strategy-5bac493074a4
+// b) https://alligator.io/angular/change-detection-strategy/

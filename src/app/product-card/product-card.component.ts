@@ -19,4 +19,6 @@ export class ProductCardComponent  {
     this.cartService.addToCart(this.product);
   }
 
+  
+
 }
