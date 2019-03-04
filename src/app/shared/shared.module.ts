@@ -38,7 +38,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     NgbModule.forRoot().ngModule
-
   ],
   providers:[
     AuthService,
