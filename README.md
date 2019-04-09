@@ -1,27 +1,26 @@
-# Oshop
+Product Shop Implementation On Latest Angular And Firebase 
+=============================================================
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
-## Development server
+http://giorgilagidze.com:4200/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+How does it work?
+----------------
+If the website doesn't work, Let me know. It might be due to hosting - money problem.
 
-## Code scaffolding
+You can login with google, add item to cart, view cart, proceed to checkout, provide your credentials. Last step on checkout where you have to click 'final buy' button is not implemented. My google account is super admin, which means I'm the one who adds/edits/deletes products, reviews customer's bought items, so your google account will not be able to see admin features.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This is written by using best practices. It's modular, flexible and architecture is split pretty well.
 
-## Build
+Docker
+======
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+If you want to use docker (which is a great way to just run the website). you can clone the repository and build the image from the root directory. It uses nginx, so make sure to bind whatever host port you want to 80 Port on the container.
 
-## Running unit tests
+docker build -t angularshop . && docker run -p 4200:80 -d angularshop
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+Authors
+=======
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Giorgi Lagidze
