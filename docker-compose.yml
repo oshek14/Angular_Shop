@@ -17,9 +17,9 @@ services:
     image: jenkinsci/blueocean
     container_name: jenkins
     volumes:
-      - "C:/xampp/htdocs/jenkins-files/jenkins_home:/var/jenkins_home"
+      - "/var/www/jenkins/jenkins_home:/var/jenkins_home"
       - "/var/run/docker.sock:/var/run/docker.sock"
-      - "C:/xampp/htdocs/jenkins-files:/home"
+      - "/var/www/jenkins:/home"
     ports:
       - "8081:8080"
     networks:
